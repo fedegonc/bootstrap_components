@@ -72,7 +72,9 @@
     <!-- Sección de Inicio -->
     <section id="inicio" class="container my-5 text-center">
     <h1>Proyecto</h1>
-    <p>A lo largo del proyecto 'Tallados El Prodigio', hemos realizado un recorrido por distintas etapas que reflejan nuestra dedicación y pasión por el arte en madera. Cada paso está cuidadosamente diseñado para evocar sensaciones de autenticidad, calidez, y personalización.</p>
+    <p>Mosquita Muerta nace como una colección excepcional de tallados únicos. Cada pieza refleja nuestro compromiso con la autenticidad, el detalle y la tradición artesanal.</p>
+    <p>Ubicados en una hermosa zona rural, nuestros talleres en Gualtallary, Vista Flores y Altamira son el núcleo donde la creatividad toma forma. Aquí, fusionamos inspiración colonial, técnicas ancestrales y la personalización artesanal para lograr la mezcla perfecta entre tradición y modernidad.</p>
+    <p>Cada cartel tallado es inimitable, llevando consigo la esencia del lugar donde fue creado y la pasión de quienes lo producen. No solo fabricamos productos, sino que contamos historias únicas a través de cada pieza, haciendo que nuestros clientes lleven consigo un pedazo de nuestra historia.</p>
     <ul>
         <li><strong>Inspiración y Estilo:</strong> Nuestros tallados están inspirados en un estilo colonial que transmite una sensación rústica, perfecta para ambientes acogedores.</li>
         <li><strong>Hecho a Mano:</strong> Cada pieza es realizada de manera artesanal, asegurando que cada cartel sea único, con detalles que resalten la destreza de nuestros artesanos.</li>
@@ -92,7 +94,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 1</h3>
                     <p class="card-text">Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">visibility</i>Ver Más</a>
                 </div>
             </div>
         </div>
@@ -102,7 +104,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 2</h3>
                     <p class="card-text">Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
+                    <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">visibility</i>Ver Más</a>
                 </div>
             </div>
         </div>
@@ -131,7 +133,18 @@
 </section>
 
     <!-- Pie de página -->
-        </main>
+            <!-- Modal para Detalles del Producto -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Detalles del Cartel Tallado</h4>
+            <img src="https://via.placeholder.com/800x600" class="img-fluid mb-4" alt="Detalle del Cartel Tallado">
+            <p>Aquí se muestran los detalles específicos del cartel tallado seleccionado, incluyendo dimensiones, material y precio.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+    </div>
+</main>
 <footer class="page-footer teal">
     <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
 </footer>
@@ -148,6 +161,8 @@
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         M.Sidenav.init(elems);
+        var modals = document.querySelectorAll('.modal');
+        M.Modal.init(modals);
         navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
     });
 </script>
@@ -173,6 +188,8 @@
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         M.Sidenav.init(elems);
+        var modals = document.querySelectorAll('.modal');
+        M.Modal.init(modals);
         navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
     });
 </script>
