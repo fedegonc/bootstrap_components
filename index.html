@@ -29,11 +29,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#home" onclick="navigate('home')">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" onclick="navigate('source')">Recursos</a>
-                </li>
+                
+                
                 <li class="nav-item">
                     <a class="nav-link" href="#contact" onclick="navigate('contact')">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#source" onclick="navigate('source')">Recursos</a>
                 </li>
             </ul>
         </div>
@@ -49,6 +51,14 @@
     <script>
         // Definición del contenido de cada página
         const pages = {
+            source: `
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h1 class="card-title">Recursos</h1>
+                        <p class="card-text">En esta sección encontrarás todos los recursos necesarios para conocer más sobre nuestro trabajo, incluyendo guías, referencias, y material complementario.</p>
+                    </div>
+                </div>
+            `,
             home: `
                 <div class="container mt-5 mb-5">
                     <img src="images/image.jpg" class="img-fluid w-100" alt="Imagen principal" style="max-height: 500px; object-fit: cover;">
@@ -83,15 +93,6 @@
                 </div>
         
             `,
-            source: `
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="card-title">Sobre Nosotros</h1>
-                        <p class="card-text">Somos una empresa dedicada a la innovación y desarrollo de soluciones tecnológicas.</p>
-                    </div>
-                </div>
-            `,
-          
             contact: `
     <div class="card mb-4">
         <div class="card-body">
