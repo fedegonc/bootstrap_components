@@ -57,23 +57,17 @@
                     <img src="images/image.jpg" class="img-fluid w-100" alt="Imagen principal" style="max-height: 500px; object-fit: cover;">
                 </div>
                 <div class="container mt-5 mb-5">
-            <div class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">Nuestra Historia</h2>
-                        <p class="card-text">Tu Leyenda Tallados surge en 2020 con la intención de diseñar y elaborar piezas en madera para diversos fines, principalmente enfocándonos en la personalización y la alta durabilidad de nuestros materiales.</p>
-                    </div>
-                </div>
-            <div class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">Nuestro Enfoque</h2>
-                        <p class="card-text">Nuestro enfoque está en diseñar letreros que cumplan una doble función: no solo indican una ubicación, sino que también reflejan la identidad y los valores de quienes los eligen, creando una conexión auténtica con el entorno.</p>
-                    </div>
-                </div>
-            <div class="card mb-4">
-                    <div class="card-body">
-                        <h2 class="card-title">Nuestros Valores</h2>
-                        <p class="card-text">Valoramos la transparencia, el trabajo en equipo y la sostenibilidad. Estamos comprometidos a brindar siempre lo mejor, respetando tanto a nuestros clientes como al medio ambiente.</p>
-                    </div>
+    <div class="row">
+        <div class="col-lg-8 mb-4">
+            $1
+        </div>
+        <div class="col-lg-4 mb-4">
+            $2
+        </div>
+        <div class="col-lg-12 mb-4">
+            $3
+        </div>
+    </div>
                 </div>
         
             `,
@@ -98,18 +92,18 @@
         <div class="card-body">
             <h1 class="card-title">Solicitar Presupuesto</h1>
             <p class="card-text">Puedes contactarnos a través del correo electrónico para cualquier consulta o solicitar un presupuesto detallado de nuestros productos personalizados.</p>
-            <form>
+            <form id="contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+                    <input type="text" class="form-control" id="nombre" name="user_name" placeholder="Ingresa tu nombre completo">
                 </div>
                 <div class="form-group">
                     <label for="email">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="tu_email@ejemplo.com">
+                    <input type="email" class="form-control" id="email" name="user_email" placeholder="tu_email@ejemplo.com">
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí tu solicitud o consulta"></textarea>
+                    <textarea class="form-control" id="mensaje" name="message" rows="4" placeholder="Escribe aquí tu solicitud o consulta"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Enviar Solicitud</button>
             </form>
@@ -153,5 +147,22 @@
             }
         });
     </script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("service_4y0luhq");
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                alert('Correo enviado correctamente');
+            }, function(error) {
+                alert('Hubo un error al enviar el correo: ' + JSON.stringify(error));
+            });
+    });
+</script>
 </body>
 </html>
