@@ -3,144 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPA - Tallados El Prodigio</title>
-    
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <title>SPA Básica</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-
-    <!-- Barra de navegación -->
-    <nav class="nav-wrapper teal">
-    <div class="container">
-        <a href="#" class="brand-logo">Tallados El Prodigio</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#" onclick="navigate('inicio')"><i class="material-icons left">home</i>Inicio</a></li>
-            <li><a href="#" onclick="navigate('trabajos-hechos')"><i class="material-icons left">collections</i>Trabajos Hechos</a></li>
-            <li><a href="#" onclick="navigate('ubicacion')"><i class="material-icons left">place</i>Ubicación</a></li>
-            <li><a href="#" onclick="navigate('contacto')"><i class="material-icons left">contacts</i>Contacto</a></li>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="navigate('home')">Inicio</a></li>
+            <li><a href="#about" onclick="navigate('about')">Sobre Nosotros</a></li>
+            <li><a href="#contact" onclick="navigate('contact')">Contacto</a></li>
         </ul>
-        
+    </nav>
+
+    <div id="content">
+        <!-- El contenido se actualizará aquí -->
     </div>
-</nav>
 
-<ul class="sidenav" id="mobile-demo">
-    <li><a href="#" onclick="navigate('inicio')"><i class="material-icons left">home</i>Inicio</a></li>
-    <li><a href="#" onclick="navigate('trabajos-hechos')"><i class="material-icons left">collections</i>Trabajos Hechos</a></li>
-    <li><a href="#" onclick="navigate('ubicacion')"><i class="material-icons left">place</i>Ubicación</a></li>
-    <li><a href="#" onclick="navigate('contacto')"><i class="material-icons left">contacts</i>Contacto</a></li>
-</ul>
-            
-        </div>
-    </div>
-</nav>
-
-    <!-- Sección de Inicio -->
-    <section id="inicio" class="container my-5 text-center">
-    <h1>Bienvenido a Tallados El Prodigio</h1>
-    <p>Descubre nuestros mejores tallados en madera con estilo único.</p>
-</section>
-
-    <!-- Sección de la Trabajos Hechos -->
-    <section id="trabajos-hechos" class="container my-5">
-    <h2 class="text-center mb-4">Trabajos Hechos</h2>
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Cartel Tallado">
-                <div class="card-body">
-                    <h3 class="card-title">Cartel Tallado Rústico 1</h3>
-                    <p class="card-text">Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Cartel Tallado">
-                <div class="card-body">
-                    <h3 class="card-title">Cartel Tallado Rústico 2</h3>
-                    <p class="card-text">Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Sección de Detalles de la Obra -->
-    <section id="detalle" class="container my-5">
-    <img src="https://via.placeholder.com/800x600" class="img-fluid mb-4" alt="Detalle del Cartel Tallado">
-    <h2>Detalles del Cartel Tallado</h2>
-    <p>Aquí se muestran los detalles específicos del cartel tallado seleccionado, incluyendo dimensiones, material y precio.</p>
-</section>
-
-    <section id="ubicacion" class="container my-5">
-    <h2 class="text-center mb-4">Ubicación</h2>
-    <p>Nuestros talleres se encuentran en una hermosa zona rural, ideal para la inspiración y la producción artesanal.</p>
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094287!2d144.95592311532154!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727db1e73955ab!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1604890950047!5m2!1sen!2sau" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-</section>
-
-
-    <section id="contacto" class="container my-5">
-    <h2 class="text-center mb-4">Contacto</h2>
-    <p>Información de contacto y redes sociales.</p>
-</section>
-
-    <!-- Pie de página -->
-        </main>
-<footer class="page-footer teal" style="position: fixed; bottom: 0; width: 100%;">
-    <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
-</footer>
-
-    <!-- JavaScript para manejar la navegación de SPA -->
-    
-
-    <!-- JavaScript de Bootstrap -->
-    
-
-    <!-- JavaScript de Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        M.Sidenav.init(elems);
-        navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
-    });
-</script>
-    <!-- JavaScript para manejar la navegación de SPA -->
     <script>
-        function navigate(sectionId) {
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Mostrar la sección seleccionada
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
+        // Definición del contenido de cada página
+        const pages = {
+            home: `
+                <h1>Bienvenido a nuestra página principal</h1>
+                <p>Esta es la sección de inicio de nuestra SPA.</p>
+            `,
+            about: `
+                <h1>Sobre Nosotros</h1>
+                <p>Somos una empresa dedicada a la innovación y desarrollo de soluciones tecnológicas.</p>
+            `,
+            contact: `
+                <h1>Contacto</h1>
+                <p>Puedes contactarnos a través del correo electrónico: contacto@example.com</p>
+            `
+        };
+
+        // Función para navegar entre las "páginas" de la SPA
+        function navigate(page) {
+            document.getElementById('content').innerHTML = pages[page];
         }
 
-        // Inicialización: Mostrar solo la sección de inicio al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            navigate('inicio');
-        });
+        // Inicializar la página mostrando la sección de inicio
+        navigate('home');
     </script>
-
-    <!-- JavaScript de Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        M.Sidenav.init(elems);
-        navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
-    });
-</script>
 </body>
 </html>
+
+/* styles.css (contenido básico de CSS) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+nav {
+    background-color: #333;
+    padding: 1em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+#content {
+    padding: 2em;
+}
