@@ -27,7 +27,6 @@
             font-family: 'Montserrat', sans-serif;
         }
     </style>
-    </style>
 </head>
 <body>
     <main>
@@ -52,15 +51,35 @@
     <li><a href="#" onclick="navigate('ubicacion')"><i class="material-icons left">place</i>Ubicación</a></li>
     <li><a href="#" onclick="navigate('contacto')"><i class="material-icons left">contacts</i>Contacto</a></li>
 </ul>
-            
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Trabajos Hechos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Ubicación</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Contacto</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
     <!-- Sección de Inicio -->
     <section id="inicio" class="container my-5 text-center">
-    <h1>Bienvenido a Tallados El Prodigio</h1>
-    <p>Descubre nuestros mejores tallados en madera con estilo único.</p>
+    <h1>Proyecto</h1>
+    <p>A lo largo del proyecto 'Tallados El Prodigio', hemos realizado un recorrido por distintas etapas que reflejan nuestra dedicación y pasión por el arte en madera. Cada paso está cuidadosamente diseñado para evocar sensaciones de autenticidad, calidez, y personalización.</p>
+    <ul>
+        <li><strong>Inspiración y Estilo:</strong> Nuestros tallados están inspirados en un estilo colonial que transmite una sensación rústica, perfecta para ambientes acogedores.</li>
+        <li><strong>Hecho a Mano:</strong> Cada pieza es realizada de manera artesanal, asegurando que cada cartel sea único, con detalles que resalten la destreza de nuestros artesanos.</li>
+        <li><strong>Personalización:</strong> Ofrecemos la posibilidad de personalizar los diseños, permitiendo que cada cliente lleve consigo un pedazo de historia y personalidad en cada tallado.</li>
+        <li><strong>Ubicación Rural:</strong> Nuestros talleres están situados en una hermosa zona rural, un entorno que potencia la creatividad y el amor por el trabajo manual.</li>
+    </ul>
+    <p>Este proyecto no solo se trata de vender un producto, sino de transmitir una experiencia, conectando el arte con la esencia de cada cliente.</p>
 </section>
 
     <!-- Sección de la Trabajos Hechos -->
@@ -105,6 +124,7 @@
     </div>
 </section>
 
+
     <section id="contacto" class="container my-5">
     <h2 class="text-center mb-4">Contacto</h2>
     <p>Información de contacto y redes sociales.</p>
@@ -112,7 +132,7 @@
 
     <!-- Pie de página -->
         </main>
-    <footer class="page-footer teal">
+<footer class="page-footer teal">
     <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
 </footer>
 
@@ -124,40 +144,37 @@
 
     <!-- JavaScript de Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+        navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
+    });
+</script>
     <!-- JavaScript para manejar la navegación de SPA -->
     <script>
-        function navigate(sectionId) {
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Mostrar la sección seleccionada
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        // Inicialización: Mostrar solo la sección de inicio al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            navigate('inicio');
+    function navigate(sectionId) {
+        // Ocultar todas las secciones
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none';
         });
-    </script>
+        // Mostrar la sección seleccionada
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.style.display = 'block';
+        }
+    }
+</script>
 
     <!-- JavaScript de Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
-    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+        navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
+    });
+</script>
 </body>
 </html>
