@@ -28,7 +28,7 @@
         </div>
     </nav>
 
-    <div id="content" class="container mt-4" >
+    <div id="content" class="container mt-4 mb-5">
         <!-- El contenido se actualizará aquí -->
     </div>
 
@@ -39,8 +39,7 @@
         // Definición del contenido de cada página
         const pages = {
             home: `
-                <div class="jumbotron" >
-        
+               
         <div class="container mt-5 mb-5">
             <div class="card mb-4">
                     <div class="card-body">
@@ -60,7 +59,7 @@
                         <p class="card-text">Valoramos la transparencia, el trabajo en equipo y la sostenibilidad. Estamos comprometidos a brindar siempre lo mejor, respetando tanto a nuestros clientes como al medio ambiente.</p>
                     </div>
                 </div>
-        </div>
+        
             `,
             about: `
                 <div class="card">
@@ -88,7 +87,7 @@
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
     </script>
-    <footer class="footer bg-dark text-white text-center py-4 footer-fixed">
+    <footer class="footer bg-dark text-white text-center py-4 footer-fixed" style="position: absolute; bottom: 0; width: 100%;">
         <div class="container">
             <span>Hecho por Federico Goncalvez. Todos los derechos reservados.</span>
         </div>
