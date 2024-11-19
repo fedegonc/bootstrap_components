@@ -4,144 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA - Tallados El Prodigio</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            padding: 2rem;
-            margin: 2rem auto;
-            width: 90%;
-            max-width: 800px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tarjeta {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            cursor: pointer;
-            background-color: #f9f9f9;
-            transition: transform 0.2s;
-        }
-
-        .tarjeta:hover {
-            transform: scale(1.02);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Barra de navegación -->
-    <nav>
-        <ul>
-            <li><a href="#" onclick="navigate('inicio')">Inicio</a></li>
-            <li><a href="#" onclick="navigate('galeria')">Galería</a></li>
-            <li><a href="#" onclick="navigate('contacto')">Contacto</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" onclick="navigate('inicio')">Tallados El Prodigio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigate('inicio')">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigate('galeria')">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="navigate('contacto')">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
     <!-- Sección de Inicio -->
-    <section id="inicio">
-        <h1>Bienvenido a Tallados El Prodigio</h1>
-        <p>Descubre nuestros mejores tallados en madera con estilo único.</p>
-    </section>
+    <section id="inicio" class="container my-5 text-center">
+    <h1>Bienvenido a Tallados El Prodigio</h1>
+    <p>Descubre nuestros mejores tallados en madera con estilo único.</p>
+</section>
 
     <!-- Sección de la Galería -->
-    <section id="galeria">
-        <h2>Galería de Carteles Tallados</h2>
-        <div>
-            <div class="tarjeta" onclick="navigate('detalle')">
-                <h3>Cartel Tallado Rústico 1</h3>
-                <p>Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
-                <button onclick="navigate('detalle')">Ver Más</button>
-            </div>
-            <div class="tarjeta" onclick="navigate('detalle')">
-                <h3>Cartel Tallado Rústico 2</h3>
-                <p>Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
-                <button onclick="navigate('detalle')">Ver Más</button>
+    <section id="galeria" class="container my-5">
+    <h2 class="text-center mb-4">Galería de Carteles Tallados</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card" onclick="navigate('detalle')">
+                <div class="card-body">
+                    <h3 class="card-title">Cartel Tallado Rústico 1</h3>
+                    <p class="card-text">Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
+                    <button class="btn btn-primary" onclick="navigate('detalle')">Ver Más</button>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="col-md-4">
+            <div class="card" onclick="navigate('detalle')">
+                <div class="card-body">
+                    <h3 class="card-title">Cartel Tallado Rústico 2</h3>
+                    <p class="card-text">Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
+                    <button class="btn btn-primary" onclick="navigate('detalle')">Ver Más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Sección de Detalles de la Obra -->
-    <section id="detalle">
-        <h2>Detalles del Cartel Tallado</h2>
-        <p>Aquí se muestran los detalles específicos del cartel tallado seleccionado, incluyendo dimensiones, material y precio.</p>
-    </section>
+    <section id="detalle" class="container my-5">
+    <h2>Detalles del Cartel Tallado</h2>
+    <p>Aquí se muestran los detalles específicos del cartel tallado seleccionado, incluyendo dimensiones, material y precio.</p>
+</section>
 
     <!-- Sección de Contacto -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Información de contacto y redes sociales.</p>
-    </section>
+    <section id="contacto" class="container my-5">
+    <h2 class="text-center mb-4">Contacto</h2>
+    <p>Información de contacto y redes sociales.</p>
+</section>
 
     <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
-    </footer>
+    <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
+</footer>
 
     <!-- JavaScript para manejar la navegación de SPA -->
     <script>
