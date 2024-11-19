@@ -15,14 +15,14 @@
     <!-- Barra de navegación -->
     <nav class="nav-wrapper teal">
     <div class="container">
-        <a href="#" class="brand-logo"><i class="material-icons left">store</i>Tallados El Prodigio</a>
+        <a href="#" class="brand-logo">Tallados El Prodigio</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="#" onclick="navigate('inicio')"><i class="material-icons left">home</i>Inicio</a></li>
             <li><a href="#" onclick="navigate('trabajos-hechos')"><i class="material-icons left">collections</i>Trabajos Hechos</a></li>
             <li><a href="#" onclick="navigate('ubicacion')"><i class="material-icons left">place</i>Ubicación</a></li>
             <li><a href="#" onclick="navigate('contacto')"><i class="material-icons left">contacts</i>Contacto</a></li>
         </ul>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        
     </div>
 </nav>
 
@@ -53,7 +53,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 1</h3>
                     <p class="card-text">Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
+                    <a class="waves-effect waves-light btn" href="#" onclick="navigate('detalle')"><i class="material-icons left">visibility</i>Ver Más</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 2</h3>
                     <p class="card-text">Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
-                    <a class="waves-effect waves-light btn"><i class="material-icons left">visibility</i>Ver Más</a>
+                    <a class="waves-effect waves-light btn" href="#" onclick="navigate('detalle')"><i class="material-icons left">visibility</i>Ver Más</a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
 </section>
 
     <!-- Sección de Detalles de la Obra -->
-    <section id="detalle" class="container my-5">
+    <section id="detalle" class="container my-5" style="display: none;">
     <img src="https://via.placeholder.com/800x600" class="img-fluid mb-4" alt="Detalle del Cartel Tallado">
     <h2>Detalles del Cartel Tallado</h2>
     <p>Aquí se muestran los detalles específicos del cartel tallado seleccionado, incluyendo dimensiones, material y precio.</p>
@@ -111,27 +111,8 @@
         M.Sidenav.init(elems);
         navigate('inicio'); // Inicialización: Mostrar solo la sección de inicio al cargar la página
     });
+});
 </script>
-    <!-- JavaScript para manejar la navegación de SPA -->
-    <script>
-        function navigate(sectionId) {
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Mostrar la sección seleccionada
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        // Inicialización: Mostrar solo la sección de inicio al cargar la página
-        document.addEventListener('DOMContentLoaded', () => {
-            navigate('inicio');
-        });
-    </script>
 
     <!-- JavaScript de Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
