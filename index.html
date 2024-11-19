@@ -7,6 +7,7 @@
     
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -21,6 +22,7 @@
             <li><a href="#" onclick="navigate('ubicacion')"><i class="material-icons left">place</i>Ubicación</a></li>
             <li><a href="#" onclick="navigate('contacto')"><i class="material-icons left">contacts</i>Contacto</a></li>
         </ul>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
 
@@ -114,5 +116,13 @@
     <!-- JavaScript de Bootstrap -->
     
 
+    <!-- JavaScript de Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
 </body>
 </html>
