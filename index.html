@@ -56,5 +56,26 @@
         <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- JavaScript para manejar la navegación de SPA -->
+    <script>
+        function navigate(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            // Mostrar la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Inicialización: Mostrar solo la sección de inicio
+        document.addEventListener('DOMContentLoaded', () => {
+            navigate('inicio');
+        });
+    </script>
+
 </body>
 </html>
