@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA - Tallados El Prodigio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
@@ -25,25 +25,36 @@
     <main>
 
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#" onclick="navigate('inicio')">Tallados El Prodigio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="nav-wrapper teal">
+    <div class="container">
+        <a href="#" class="brand-logo">Tallados El Prodigio</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#" onclick="navigate('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="navigate('galeria')">Galería</a></li>
+            <li><a href="#" onclick="navigate('ubicacion')">Ubicación</a></li>
+            <li><a href="#" onclick="navigate('contacto')">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#" onclick="navigate('inicio')">Inicio</a></li>
+    <li><a href="#" onclick="navigate('galeria')">Galería</a></li>
+    <li><a href="#" onclick="navigate('ubicacion')">Ubicación</a></li>
+    <li><a href="#" onclick="navigate('contacto')">Contacto</a></li>
+</ul>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigate('inicio')">Inicio</a>
+                    <a class="nav-link" href="#" >Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigate('galeria')">Galería</a>
+                    <a class="nav-link" href="#" >Galería</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigate('ubicacion')">Ubicación</a>
+                    <a class="nav-link" href="#" >Ubicación</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="navigate('contacto')">Contacto</a>
+                    <a class="nav-link" href="#" >Contacto</a>
                 </li>
             </ul>
         </div>
@@ -61,22 +72,22 @@
     <h2 class="text-center mb-4">Galería de Carteles Tallados</h2>
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="card" onclick="navigate('detalle')">
+            <div class="card">
                 <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Cartel Tallado">
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 1</h3>
                     <p class="card-text">Este cartel tallado rústico está hecho a mano, ideal para dar un toque único y acogedor a tu hogar.</p>
-                    <button class="btn btn-primary" onclick="navigate('detalle')">Ver Más</button>
+                    <a class="waves-effect waves-light btn">Ver Más</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card" onclick="navigate('detalle')">
+            <div class="card">
                 <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Cartel Tallado">
                 <div class="card-body">
                     <h3 class="card-title">Cartel Tallado Rústico 2</h3>
                     <p class="card-text">Cartel tallado a mano con diseño personalizado, perfecto para cualquier espacio con un estilo colonial.</p>
-                    <button class="btn btn-primary" onclick="navigate('detalle')">Ver Más</button>
+                    <a class="waves-effect waves-light btn">Ver Más</a>
                 </div>
             </div>
         </div>
@@ -106,7 +117,7 @@
 
     <!-- Pie de página -->
         </main>
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="page-footer teal">
     <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
 </footer>
 
@@ -132,6 +143,12 @@
     </script>
 
     <!-- JavaScript de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+    });
+</script>
 </body>
 </html>
