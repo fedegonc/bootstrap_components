@@ -4,22 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA - Tallados El Prodigio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <style>
-        html, body {
-            height: 100%;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
-    </style>
+    
+    
 </head>
 <body>
     <main>
@@ -122,33 +108,10 @@
 </footer>
 
     <!-- JavaScript para manejar la navegación de SPA -->
-    <script>
-        function navigate(sectionId) {
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Mostrar la sección seleccionada
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        // Inicialización: Mostrar solo la sección de inicio
-        document.addEventListener('DOMContentLoaded', () => {
-            navigate('inicio');
-        });
-    </script>
+    
 
     <!-- JavaScript de Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-    });
-</script>
+    
+
 </body>
 </html>
