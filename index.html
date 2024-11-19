@@ -16,6 +16,8 @@
         body {
             display: flex;
             flex-direction: column;
+            background-color: #f0f0f0; /* Muy claro gris */
+            color: #333; /* Texto más oscuro para contraste */
         }
         main {
             flex: 1;
@@ -25,6 +27,13 @@
         }
         body, h1, h2, h3, h4, h5, h6, p, a {
             font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em; /* Tamaño de letra más pequeño */
+        }
+        .nav-wrapper, .page-footer {
+            background-color: black;
+        }
+        a {
+            color: #333;
         }
     </style>
 </head>
@@ -32,9 +41,9 @@
     <main>
 
     <!-- Barra de navegación -->
-    <nav class="nav-wrapper teal">
+    <nav class="nav-wrapper black">
     <div class="container">
-        <a href="#" class="brand-logo"><i class="material-icons left">store</i>Tallados El Prodigio</a>
+        <a href="#" class="brand-logo">Tallados El Prodigio</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="#" onclick="navigate('inicio')"><i class="material-icons left">home</i>Inicio</a></li>
             <li><a href="#" onclick="navigate('trabajos-hechos')"><i class="material-icons left">collections</i>Trabajos Hechos</a></li>
@@ -60,13 +69,13 @@
     <section id="inicio" class="container my-5 text-center">
     <h1>Proyecto Tallados El Prodigio</h1>
     <p>Tallados El Prodigio es una colección excepcional de tallados únicos. Cada pieza refleja nuestro compromiso con la autenticidad, el detalle y la tradición artesanal.</p>
-    <p>Ubicados en una hermosa zona rural, nuestros talleres son el núcleo donde la creatividad toma forma. Aquí, fusionamos inspiración colonial, técnicas ancestrales y la personalización artesanal para lograr la mezcla perfecta entre tradición y modernidad.</p>
-    <p>Cada cartel tallado es inimitable, llevando consigo la esencia del lugar donde fue creado y la pasión de quienes lo producen. No solo fabricamos productos, sino que contamos historias únicas a través de cada pieza, haciendo que nuestros clientes lleven consigo un pedazo de nuestra historia.</p>
+    <p>Ubicados en una zona rural que potencia la creatividad, nuestros talleres son el lugar donde la inspiración y la tradición se unen para crear cada pieza. Nos enfocamos en fusionar métodos tradicionales con un toque moderno, manteniendo siempre el compromiso con la personalización artesanal que nuestros clientes aprecian.</p>
+    <p>Cada cartel tallado refleja la dedicación del trabajo artesanal y la identidad del lugar donde fue creado. Más allá de vender un producto, buscamos ofrecer algo significativo para nuestros clientes, conectando cada pieza con sus propias historias y experiencias.</p>
     <ul>
-        <li><strong>Inspiración y Estilo:</strong> Nuestros tallados están inspirados en un estilo colonial que transmite una sensación rústica, perfecta para ambientes acogedores.</li>
+        <li><strong>Inspiración y Estilo:</strong> Nuestros tallados combinan influencias coloniales con un toque personalizado que crea un ambiente acogedor y auténtico.</li>
         <li><strong>Hecho a Mano:</strong> Cada pieza es realizada de manera artesanal, asegurando que cada cartel sea único, con detalles que resalten la destreza de nuestros artesanos.</li>
         <li><strong>Personalización:</strong> Ofrecemos la posibilidad de personalizar los diseños, permitiendo que cada cliente lleve consigo un pedazo de historia y personalidad en cada tallado.</li>
-        <li><strong>Ubicación Rural:</strong> Nuestros talleres están situados en una hermosa zona rural, un entorno que potencia la creatividad y el amor por el trabajo manual.</li>
+        <li><strong>Ubicación Rural:</strong> Nuestros talleres están ubicados en una zona rural que inspira cada proceso artesanal y fomenta el enfoque detallista en cada pieza creada.</li>
     </ul>
     <p>Este proyecto no solo se trata de vender un producto, sino de transmitir una experiencia, conectando el arte con la esencia de cada cliente.</p>
 </section>
@@ -122,7 +131,7 @@
     <!-- Pie de página -->
             
 </main>
-<footer class="page-footer teal">
+<footer class="page-footer black">
     <p>&copy; 2024 Tallados El Prodigio. Todos los derechos reservados.</p>
 </footer>
 
