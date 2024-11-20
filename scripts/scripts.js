@@ -67,6 +67,14 @@ const homePage = `
                     </div>
                 </div>
             </div>
+            <div class="col-lg-12 mb-4 d-flex">
+                <div class="card mb-4 flex-fill">
+                    <div class="card-body">
+                        <h2 class="card-title">Nuestros Valores</h2>
+                        <p class="card-text">Nos enfocamos en la sostenibilidad, la calidad artesanal y la satisfacción del cliente. Creemos en la importancia de utilizar materiales de alta calidad y en el compromiso con prácticas responsables que respeten el medio ambiente. Nuestro objetivo es crear piezas que no solo sean estéticamente hermosas, sino también funcionales y duraderas.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 `;
