@@ -8,36 +8,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-            html, body {
-            height: 100%;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        #content {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
-            html, body {
-            height: 100%;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        #content {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
+       /* Consolidado y optimizado */
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#content {
+    flex: 1;
+    min-height: calc(100vh - 300px); /* Asegura una altura adaptable */
+}
+footer {
+    margin-top: auto; /* Empuja el footer hacia el final */
+}
+
     </style>
 </head>
 <body onload="showLoader()">
