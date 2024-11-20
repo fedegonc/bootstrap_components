@@ -132,26 +132,32 @@ const pages = {
 };
 
 // Función para cambiar entre páginas y marcar la navegación activa
+// Esta función cambia el contenido de la página y ajusta la URL sin recargar
 function navigate(page, productId = null) {
+    console.log("Navigating to:", page, "with productId:", productId); // Para verificar la navegación
     if (page === 'details' && productId !== null) {
         document.getElementById('content').innerHTML = pages.details(productId);
     } else {
         document.getElementById('content').innerHTML = pages[page];
     }
 
-    window.history.pushState({}, '', '#' + page); // Enmascarar la URL sin recargar la página
+    // Cambia la URL sin recargar la página
+    window.history.pushState({}, '', '#' + page);
 
+    // Marca el enlace de navegación activo
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     const activeLink = document.querySelector(`[href="#${page}"]`);
     if (activeLink) activeLink.classList.add('active');
 
-    // Si se navega a la página de contacto, interceptar el envío del formulario
+    // Intercepta el envío del formulario en la página de contacto
     if (page === 'contact') {
         const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío del formulario
-            alert('Formulario enviado exitosamente. ¡Nos pondremos en contacto contigo pronto!');
-        });
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita el envío del formulario
+                alert('Formulario enviado exitosamente. ¡Nos pondremos en contacto contigo pronto!');
+            });
+        }
     }
 }
 
