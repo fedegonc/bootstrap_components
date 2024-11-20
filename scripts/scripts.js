@@ -121,10 +121,7 @@ const pages = {
 };
 
 // Función para cambiar entre páginas y marcar la navegación activa
-function navigate(page, productId = null) {
-    if (page === 'details' && productId) {
-        document.getElementById('content').innerHTML = pages.details(productId);
-    } else {
+    window.history.pushState({}, '', '#'+page); // Enmascarar la URL sin recargar la página} else {
         document.getElementById('content').innerHTML = pages[page];
     }
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
