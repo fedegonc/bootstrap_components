@@ -61,9 +61,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact" onclick="navigate('contact')">Contacto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#source" onclick="navigate('source')">Recursos</a>
-                </li>
+                
                             <li class="nav-item">
                     <a class="nav-link" href="#catalog" onclick="navigate('catalog')">Catálogo</a>
                 </li>
@@ -121,14 +119,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            `,
-            source: `
-                <div class="card mb-4 flex-fill">
-                    <div class="card-body">
-                        <h1 class="card-title">Recursos</h1>
-                        <p class="card-text">En esta sección encontrarás todos los recursos necesarios para conocer más sobre nuestro trabajo, incluyendo guías, referencias, y material complementario.</p>
                     </div>
                 </div>
             `,
@@ -207,13 +197,9 @@
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
     </script>
-    <footer class="footer bg-dark text-white text-center py-4" style="width: 100%;">
-        <div class="container">
-            <span>Hecho por Federico Goncalvez. Todos los derechos reservados.</span>
-        </div>
-    </footer>
+    
 
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 <script>
     (function() {
         emailjs.init("service_4y0luhq");
