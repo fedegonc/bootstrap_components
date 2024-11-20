@@ -10,9 +10,9 @@
     <script>
         // Definición de productos simplificada
         const products = [
-            { id: 1, title: "Tallados en Relieve", image: "imagen1", description: "Piezas que destacan por detalles elevados, ideales para decoración." },
-            { id: 2, title: "Tallados Hundidos", image: "imagen2", description: "Diseños esculpidos hacia adentro, perfectos para un toque moderno." },
-            { id: 3, title: "Carteles Pintados", image: "imagen3", description: "Carteles personalizados para negocios o decoraciones." }
+            { id: 1, title: "Tallados en Relieve", description: "Piezas que destacan por detalles elevados, ideales para decoración." },
+            { id: 2, title: "Tallados Hundidos", description: "Diseños esculpidos hacia adentro, perfectos para un toque moderno." },
+            { id: 3, title: "Carteles Pintados", description: "Carteles personalizados para negocios o decoraciones." }
         ];
 
         // Definición de páginas
@@ -29,32 +29,26 @@
         const pages = {
             home: new Page(`
                 <div>
-                    <img src="images/image.jpg" alt="Imagen de tallado principal">
-                    <div>
-                        <div>
-                            <h2>Nuestra Historia</h2>
-                            <p>Tu Leyenda Tallados surge en 2020 con el propósito de diseñar piezas de madera personalizadas y duraderas.</p>
-                        </div>
-                        <div>
-                            <h2>Nuestros Valores</h2>
-                            <p>Nos enfocamos en sostenibilidad, calidad artesanal y satisfacción del cliente.</p>
-                        </div>
-                    </div>
+                    <h2>Nuestra Historia</h2>
+                    <p>Tu Leyenda Tallados surge en 2020 con el propósito de diseñar piezas de madera personalizadas y duraderas.</p>
+                    <h2>Nuestros Valores</h2>
+                    <p>Nos enfocamos en sostenibilidad, calidad artesanal y satisfacción del cliente.</p>
+                    <nav>
+                        <a href="#" onclick="router.navigate('catalog')">Ir al Catálogo</a>
+                    </nav>
                 </div>
             `),
             catalog: new Page(`
                 <div>
                     <h1>Catálogo de Tallados</h1>
+                    <nav>
+                        <a href="#" onclick="router.navigate('home')">Volver al Inicio</a>
+                    </nav>
                     <div>
                         ${products.map(product => `
                             <div>
-                                <div>
-                                    <img src="${product.image}" alt="${product.title}">
-                                    <div>
-                                        <h5>${product.title}</h5>
-                                        <p>${product.description}</p>
-                                    </div>
-                                </div>
+                                <h5>${product.title}</h5>
+                                <p>${product.description}</p>
                             </div>
                         `).join('')}
                     </div>
