@@ -40,11 +40,8 @@
         }
     </style>
 </head>
-<body onload="showLoader()">
-    <div id="loader" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999;">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Cargando...</span>
-        </div>
+<body)">
+    
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#" style="font-style: italic; font-family: 'Montserrat', sans-serif; font-style: italic;">Tu Leyenda</a>
@@ -182,15 +179,6 @@
         // Función para navegar entre las "páginas" de la SPA
         function navigate(page) {
             document.getElementById('content').innerHTML = pages[page];
-        }
-
-        // Función para mostrar el loader hasta que el contenido esté cargado
-        function showLoader() {
-            setTimeout(() => {
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-                navigate('home');
-            }, 2000); // Ajusta el tiempo según sea necesario
         }
 
         // Inicializar la página mostrando la sección de inicio
