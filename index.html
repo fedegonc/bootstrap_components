@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Tallados</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1mm solid black;
+            padding: 1mm;
+            margin: 1mm;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            padding: 1mm;
+            margin: 1mm;
+        }
+    </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#" onclick="router.navigate('home')">Inicio</a>
+        <a href="#" onclick="router.navigate('catalog')">Catálogo</a>
+    </div>
     <div id="content"></div>
     <script>
         // Definición de productos simplificada
