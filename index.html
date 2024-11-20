@@ -32,7 +32,7 @@ footer {
     margin-top: auto; /* Empuja el footer hacia el final */
 } </style>
 </head>
-<body onload="showLoader()">
+<body>
     <div id="loader" style="position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9999;">
         <div class="spinner-border text-primary" role="status">
             <span class="sr-only">Cargando...</span>
@@ -176,15 +176,6 @@ footer {
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     document.querySelector(`[href="#${page}"]`).classList.add('active');
 }
-
-        // Función para mostrar el loader hasta que el contenido esté cargado
-        function showLoader() {
-            setTimeout(() => {
-                document.getElementById('loader').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-                navigate('home');
-            }, 2000); // Ajusta el tiempo según sea necesario
-        }
 
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
