@@ -4,38 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tu Leyenda</title>
-   <!-- CSS personalizado -->
 
-<!-- Carga diferida de Bootstrap (versión moderna) -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- Carga de Bootstrap (versión moderna) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-<noscript>
+    <!-- Fuente Montserrat -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-</noscript>
 
     <style>
-       /* Consolidado y optimizado */
-body, html {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-#content {
-    flex: 1;
-    min-height: calc(100vh - 300px); /* Asegura una altura adaptable */
-}
-footer {
-    margin-top: auto; /* Empuja el footer hacia el final */
-} </style>
+        /* Consolidado y optimizado */
+        body, html {
+            font-family: 'Montserrat', sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #content {
+            flex: 1;
+            min-height: calc(100vh - 300px); /* Asegura una altura adaptable */
+        }
+        footer {
+            margin-top: auto; /* Empuja el footer hacia el final */
+        }
+        .nav-link.active {
+            color: #ffcc00 !important; /* Diferencia la página activa */
+        }
+    </style>
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#" style="font-style: italic; font-family: 'Montserrat', sans-serif; font-style: italic;">Tu Leyenda</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#" style="font-style: italic;">Tu Leyenda</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -43,8 +43,6 @@ footer {
                 <li class="nav-item">
                     <a class="nav-link" href="#home" onclick="navigate('home')">Inicio</a>
                 </li>
-                
-                
                 <li class="nav-item">
                     <a class="nav-link" href="#catalog" onclick="navigate('catalog')">Catálogo</a>
                 </li>
@@ -55,13 +53,13 @@ footer {
         </div>
     </nav>
 
-    <div id="content" class="container mt-4 mb-5" style="min-height: calc(100vh - 300px); display: none;">
+    <div id="content" class="container mt-4 mb-5">
         <!-- El contenido se actualizará aquí -->
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         // Definición del contenido de cada página
         const pages = {
@@ -71,37 +69,28 @@ footer {
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card">
-                                <img src="images/tallado_relieve.jpg" class="card-img-top" alt="Tallado en Relieve">
+                                <img src="images/tallado_relieve.jpg" class="card-img-top" alt="Tallado en relieve único de madera">
                                 <div class="card-body">
                                     <h5 class="card-title">Tallados en Relieve</h5>
-                                    <p class="card-text">Piezas que se destacan por sus detalles elevados, dando vida a diseños únicos y personalizados.</p>
+                                    <p class="card-text">Piezas que destacan por detalles elevados, dando vida a diseños personalizados.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card">
-                                <img src="images/imagen2.jpg" class="card-img-top" alt="Tallado Hundido">
+                                <img src="images/imagen2.jpg" class="card-img-top" alt="Tallado hundido con diseño moderno">
                                 <div class="card-body">
                                     <h5 class="card-title">Tallados Hundidos</h5>
-                                    <p class="card-text">Técnicas de tallado donde los diseños se esculpen hacia adentro, creando una impresión duradera.</p>
+                                    <p class="card-text">Técnicas de tallado donde los diseños se esculpen hacia adentro.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card">
-                                <img src="images/carteles.jpg" class="card-img-top" alt="Carteles">
+                                <img src="images/carteles.jpg" class="card-img-top" alt="Carteles de madera personalizados">
                                 <div class="card-body">
                                     <h5 class="card-title">Carteles</h5>
-                                    <p class="card-text">Carteles de madera personalizados, perfectos para negocios o decoraciones personales con estilo.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="images/imagen3.jpg" class="card-img-top" alt="Murales">
-                                <div class="card-body">
-                                    <h5 class="card-title">Murales</h5>
-                                    <p class="card-text">Grandes obras en madera que capturan paisajes o conceptos artísticos, ideales para destacar cualquier espacio.</p>
+                                    <p class="card-text">Carteles de madera personalizados, perfectos para negocios o decoraciones.</p>
                                 </div>
                             </div>
                         </div>
@@ -110,74 +99,63 @@ footer {
             `,
             home: `
                 <div class="container mt-5 mb-5">
-                    <img src="images/image.jpg" class="img-fluid w-100" alt="Imagen principal" style="max-height: 500px; object-fit: cover;">
+                    <img src="images/image.jpg" class="img-fluid w-100" alt="Imagen de tallado principal" style="max-height: 500px; object-fit: cover;">
                 </div>
                 <div class="container mt-5 mb-5">
-    <div class="row d-flex flex-wrap align-items-stretch">
-        <div class="col-lg-8 col-md-12 mb-4 d-flex">
-            <div class="card mb-4 flex-fill">
-                <div class="card-body">
-                    <h2 class="card-title">Nuestra Historia</h2>
-                    <p class="card-text">Tu Leyenda Tallados surge en 2020 con la intención de diseñar y elaborar piezas en madera para diversos fines, principalmente enfocándonos en la personalización y la alta durabilidad de nuestros materiales.</p>
+                    <div class="row d-flex flex-wrap align-items-stretch">
+                        <div class="col-lg-8 col-md-12 mb-4 d-flex">
+                            <div class="card mb-4 flex-fill">
+                                <div class="card-body">
+                                    <h2 class="card-title">Nuestra Historia</h2>
+                                    <p class="card-text">Tu Leyenda Tallados surge en 2020 con la intención de diseñar y elaborar piezas en madera para diversos fines, principalmente enfocándonos en la personalización y la alta durabilidad de nuestros materiales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                            <div class="card mb-4 flex-fill">
+                                <div class="card-body">
+                                    <h2 class="card-title">Nuestro Enfoque</h2>
+                                    <p class="card-text">Diseñamos letreros que cumplen doble función: indicar una ubicación y reflejar identidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4 d-flex">
-            <div class="card mb-4 flex-fill">
-                <div class="card-body">
-                    <h2 class="card-title">Nuestro Enfoque</h2>
-                    <p class="card-text">Nuestro enfoque está en diseñar letreros que cumplan una doble función: no solo indican una ubicación, sino que también reflejan la identidad y los valores de quienes los eligen, creando una conexión auténtica con el entorno.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-12 col-md-6 mb-4 d-flex">
-            <div class="card mb-4 flex-fill">
-                <div class="card-body">
-                    <h2 class="card-title">Nuestros Valores</h2>
-                    <p class="card-text">Valoramos la transparencia, el trabajo en equipo y la sostenibilidad. Estamos comprometidos a brindar siempre lo mejor, respetando tanto a nuestros clientes como al medio ambiente.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-                </div>
-        
             `,
             contact: `
-    <div class="card mb-4 flex-fill">
-        <div class="card-body">
-            <h1 class="card-title">Solicitar Presupuesto</h1>
-            <p class="card-text">Puedes contactarnos a través del correo electrónico para cualquier consulta o solicitar un presupuesto detallado de nuestros productos personalizados.</p>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="user_name" placeholder="Ingresa tu nombre completo">
+                <div class="card mb-4 flex-fill">
+                    <div class="card-body">
+                        <h1 class="card-title">Solicitar Presupuesto</h1>
+                        <p class="card-text">Puedes contactarnos para consultas o un presupuesto personalizado.</p>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="user_name" placeholder="Ingresa tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="user_email" placeholder="tu_email@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="message" rows="4" placeholder="Escribe aquí tu consulta"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Enviar Solicitud</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="user_email" placeholder="tu_email@ejemplo.com">
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="message" rows="4" placeholder="Escribe aquí tu solicitud o consulta"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mt-3">Enviar Solicitud</button>
-            </form>
-        </div>
-    </div>`
+            `
         };
 
+        // Función para cambiar entre páginas y marcar la navegación activa
         function navigate(page) {
-    document.getElementById('content').innerHTML = pages[page];
-    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-    document.querySelector(`[href="#${page}"]`).classList.add('active');
-}
+            document.getElementById('content').innerHTML = pages[page];
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelector(`[href="#${page}"]`).classList.add('active');
+        }
 
-        // Inicializar la página mostrando la sección de inicio
+        // Inicializa la página en "home"
         navigate('home');
     </script>
-    
-
-
-
 </body>
 </html>
