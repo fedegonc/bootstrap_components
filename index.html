@@ -24,6 +24,20 @@
         footer {
             margin-top: auto;
         }
+            html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #content {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
     </style>
 </head>
 <body onload="showLoader()">
@@ -193,25 +207,12 @@
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
     </script>
-    <footer class="footer bg-dark text-white text-center py-4" style="position: relative; width: 100%;">
+    <footer class="footer bg-dark text-white text-center py-4" style="width: 100%;">
         <div class="container">
             <span>Hecho por Federico Goncalvez. Todos los derechos reservados.</span>
         </div>
     </footer>
-<script>
-        // Asegurar que el footer esté al final si el contenido no llena la pantalla
-        document.addEventListener('DOMContentLoaded', function() {
-            const content = document.getElementById('content');
-            const footer = document.querySelector('footer');
-            if (document.body.scrollHeight <= window.innerHeight) {
-                footer.style.position = 'relative';
-                footer.style.bottom = '0';
-                footer.style.width = '100%';
-            } else {
-                footer.style.position = 'relative';
-            }
-        });
-    </script>
+
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
     (function() {
