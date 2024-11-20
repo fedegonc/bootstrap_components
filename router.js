@@ -2,12 +2,12 @@
 class Router {
     navigate(page) {
         console.log("Navigating to:", page);
-        const url = new URL(window.location);
-        url.pathname = `/${page}`;
-        window.history.pushState({}, '', url);
+        const baseUrl = window.location.origin;
+        const newUrl = `${baseUrl}/${page}`;
+        window.history.pushState({}, '', newUrl);
         
         document.getElementById('content').innerHTML = pages[page].render();
-        console.log(`Estás en la ruta: ${url.pathname}`);
+        console.log(`Estás en la ruta: ${newUrl}`);
     }
 }
 
