@@ -4,22 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA Tallados</title>
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border: 1mm solid black;
-            padding: 1mm;
-            margin: 1mm;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: black;
-            padding: 1mm;
-            margin: 1mm;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="navbar">
@@ -27,69 +12,10 @@
         <a href="#" onclick="router.navigate('catalog')">Catálogo</a>
     </div>
     <div id="content"></div>
+    <script src="products.js"></script>
+    <script src="pages.js"></script>
+    <script src="router.js"></script>
     <script>
-        // Definición de productos simplificada
-        const products = [
-            { id: 1, title: "Tallados en Relieve", description: "Piezas que destacan por detalles elevados, ideales para decoración." },
-            { id: 2, title: "Tallados Hundidos", description: "Diseños esculpidos hacia adentro, perfectos para un toque moderno." },
-            { id: 3, title: "Carteles Pintados", description: "Carteles personalizados para negocios o decoraciones." }
-        ];
-
-        // Definición de páginas
-        class Page {
-            constructor(content) {
-                this.content = content;
-            }
-
-            render() {
-                return this.content;
-            }
-        }
-
-        const pages = {
-            home: new Page(`
-                <div>
-                    <h2>Nuestra Historia</h2>
-                    <p>Tu Leyenda Tallados surge en 2020 con el propósito de diseñar piezas de madera personalizadas y duraderas.</p>
-                    <h2>Nuestros Valores</h2>
-                    <p>Nos enfocamos en sostenibilidad, calidad artesanal y satisfacción del cliente.</p>
-                    <nav>
-                        <a href="#" onclick="router.navigate('catalog')">Ir al Catálogo</a>
-                    </nav>
-                </div>
-            `),
-            catalog: new Page(`
-                <div>
-                    <h1>Catálogo de Tallados</h1>
-                    <nav>
-                        <a href="#" onclick="router.navigate('home')">Volver al Inicio</a>
-                    </nav>
-                    <div>
-                        ${products.map(product => `
-                            <div>
-                                <h5>${product.title}</h5>
-                                <p>${product.description}</p>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `)
-        };
-
-        // Router para manejar la navegación
-        class Router {
-            navigate(page) {
-                console.log("Navigating to:", page);
-                const url = new URL(window.location);
-                url.hash = page;
-                window.history.pushState({}, '', url);
-                
-                document.getElementById('content').innerHTML = pages[page].render();
-            }
-        }
-
-        const router = new Router();
-
         // Inicializa la página en "home"
         router.navigate('home');
     </script>
