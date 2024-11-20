@@ -137,12 +137,11 @@ function navigate(page, productId = null) {
     console.log("Navigating to:", page, "with productId:", productId); // Para verificar la navegación
     if (page === 'details' && productId !== null) {
         document.getElementById('content').innerHTML = pages.details(productId);
+        window.history.pushState({}, '', `#details/${productId}`);
     } else {
         document.getElementById('content').innerHTML = pages[page];
+        window.history.pushState({}, '', `#${page}`);
     }
-
-    // Cambia la URL sin recargar la página
-    window.history.pushState({}, '', '#' + page);
 
     // Marca el enlace de navegación activo
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
