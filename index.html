@@ -180,7 +180,7 @@
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
     </script>
-    <footer class="footer bg-dark text-white text-center py-4" style="position: relative; width: 100%;">
+    <footer class="footer bg-dark text-white text-center py-4" style="position: fixed; bottom: 0; width: 100%; z-index: 9999;">
         <div class="container">
             <span>Hecho por Federico Goncalvez. Todos los derechos reservados.</span>
         </div>
@@ -191,7 +191,7 @@
             const content = document.getElementById('content');
             const footer = document.querySelector('footer');
             if (document.body.scrollHeight <= window.innerHeight) {
-                footer.style.position = 'booton';
+                footer.style.position = 'fixed';
                 footer.style.bottom = '0';
                 footer.style.width = '100%';
             } else {
