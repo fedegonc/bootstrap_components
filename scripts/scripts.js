@@ -128,12 +128,14 @@ const pages = {
 class Router {
     navigate(page, productId = null) {
         console.log("Navigating to:", page, "with productId:", productId);
+        const url = new URL(window.location);
+        url.hash = productId !== null ? `details/${productId}` : page;
+        window.history.pushState({}, '', url);
+        
         if (page === 'details' && productId !== null) {
             document.getElementById('content').innerHTML = productDetails[productId].generateDetailsPage();
-            window.history.pushState({}, '', `#details/${productId}`);
         } else {
             document.getElementById('content').innerHTML = pages[page].render();
-            window.history.pushState({}, '', `#${page}`);
         }
 
         // Marca el enlace de navegación activo
