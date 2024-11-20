@@ -171,13 +171,13 @@
 
         // Función para mostrar el loader hasta que el contenido esté cargado
         function showLoader() {
-            window.addEventListener('load', () => {
+            setTimeout(() => {
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 navigate('home');
-            });
+            }, 1000);
         } // Ajusta el tiempo según sea necesario
-        
+        }
 
         // Inicializar la página mostrando la sección de inicio
         navigate('home');
