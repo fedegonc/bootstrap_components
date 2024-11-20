@@ -120,6 +120,8 @@
         }
     };
 
+
+
     // Función para cambiar entre páginas y marcar la navegación activa
     function navigate(page, productId = null) {
         if (page === 'details' && productId) {
