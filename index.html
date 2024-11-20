@@ -37,6 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#source" onclick="navigate('source')">Recursos</a>
                 </li>
+                            <li class="nav-item">
+                    <a class="nav-link" href="#catalog" onclick="navigate('catalog')">Catálogo</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -51,6 +54,49 @@
     <script>
         // Definición del contenido de cada página
         const pages = {
+            catalog: `
+                <div class="container mt-5 mb-5">
+                    <h1 class="mb-4">Catálogo de Tallados</h1>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="images/tallado_relieve.jpg" class="card-img-top" alt="Tallado en Relieve">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tallados en Relieve</h5>
+                                    <p class="card-text">Piezas que se destacan por sus detalles elevados, dando vida a diseños únicos y personalizados.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="images/tallado_hundido.jpg" class="card-img-top" alt="Tallado Hundido">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tallados Hundidos</h5>
+                                    <p class="card-text">Técnicas de tallado donde los diseños se esculpen hacia adentro, creando una impresión duradera.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="images/carteles.jpg" class="card-img-top" alt="Carteles">
+                                <div class="card-body">
+                                    <h5 class="card-title">Carteles</h5>
+                                    <p class="card-text">Carteles de madera personalizados, perfectos para negocios o decoraciones personales con estilo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card">
+                                <img src="images/murales.jpg" class="card-img-top" alt="Murales">
+                                <div class="card-body">
+                                    <h5 class="card-title">Murales</h5>
+                                    <p class="card-text">Grandes obras en madera que capturan paisajes o conceptos artísticos, ideales para destacar cualquier espacio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `,
             source: `
                 <div class="card mb-4 flex-fill">
                     <div class="card-body">
