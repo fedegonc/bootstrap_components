@@ -8,23 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        body, html {
             font-family: 'Montserrat', sans-serif;
-        }
-            html, body {
-            height: 100%;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        #content {
-            flex: 1;
-        }
-        footer {
-            margin-top: auto;
-        }
-            html, body {
             height: 100%;
         }
         body {
@@ -34,9 +19,6 @@
         }
         #content {
             flex: 1;
-        }
-        footer {
-            margin-top: auto;
         }
     </style>
 </head>
@@ -93,7 +75,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card">
-                                <img src="images/imagen2.jpg" class="card-img-top" alt="Tallado Hundido">
+                                <img src="images/tallado_hundido.jpg" class="card-img-top" alt="Tallado Hundido">
                                 <div class="card-body">
                                     <h5 class="card-title">Tallados Hundidos</h5>
                                     <p class="card-text">Técnicas de tallado donde los diseños se esculpen hacia adentro, creando una impresión duradera.</p>
@@ -111,7 +93,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 mb-4">
                             <div class="card">
-                                <img src="images/imagen3.jpg" class="card-img-top" alt="Murales">
+                                <img src="images/murales.jpg" class="card-img-top" alt="Murales">
                                 <div class="card-body">
                                     <h5 class="card-title">Murales</h5>
                                     <p class="card-text">Grandes obras en madera que capturan paisajes o conceptos artísticos, ideales para destacar cualquier espacio.</p>
@@ -182,15 +164,19 @@
         // Función para navegar entre las "páginas" de la SPA
         function navigate(page) {
             document.getElementById('content').innerHTML = pages[page];
+            if (page === 'contact') {
+                initializeEmailJS();
+            }
         }
 
         // Función para mostrar el loader hasta que el contenido esté cargado
         function showLoader() {
-            setTimeout(() => {
+            window.addEventListener('load', () => {
                 document.getElementById('loader').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 navigate('home');
-            }, 2000); // Ajusta el tiempo según sea necesario
+            });
+        } // Ajusta el tiempo según sea necesario
         }
 
         // Inicializar la página mostrando la sección de inicio
@@ -200,20 +186,18 @@
 
 
 <script>
-    (function() {
+    function initializeEmailJS() {
         emailjs.init("service_4y0luhq");
-    })();
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-            .then(function() {
-                alert('Correo enviado correctamente');
-            }, function(error) {
-                alert('Hubo un error al enviar el correo: ' + JSON.stringify(error));
-            });
-    });
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Correo enviado correctamente');
+                }, function(error) {
+                    alert('Hubo un error al enviar el correo: ' + JSON.stringify(error));
+                });
+        });
+    }
 </script>
 </body>
 </html>
