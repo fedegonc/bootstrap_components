@@ -171,10 +171,11 @@ footer {
     </div>`
         };
 
-        // Función para navegar entre las "páginas" de la SPA
         function navigate(page) {
-            document.getElementById('content').innerHTML = pages[page];
-        }
+    document.getElementById('content').innerHTML = pages[page];
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    document.querySelector(`[href="#${page}"]`).classList.add('active');
+}
 
         // Función para mostrar el loader hasta que el contenido esté cargado
         function showLoader() {
@@ -191,21 +192,6 @@ footer {
     
 
 
-<script>
-    (function() {
-        emailjs.init("service_4y0luhq");
-    })();
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-            .then(function() {
-                alert('Correo enviado correctamente');
-            }, function(error) {
-                alert('Hubo un error al enviar el correo: ' + JSON.stringify(error));
-            });
-    });
-</script>
 </body>
 </html>
